@@ -15,7 +15,3 @@
 
 (defmacro it (text &rest body)
   `(desc ,text ,@body))
-
-
-
-
