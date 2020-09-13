@@ -10,8 +10,9 @@
   )
 
 (defmacro desc (text &rest body)
-  (format t "~a~&" text)
-  `(caar ,@body))
+  (format t "~%~a~&" text)
+  `(progn
+     ,@(loop for f in body collect `(caar ,f))))
 
 (defmacro it (text &rest body)
   `(desc ,text ,@body))
