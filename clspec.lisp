@@ -1,14 +1,3 @@
-(defpackage #:clspec
-  (:use #:common-lisp)
-  (:export
-   #:desc
-   #:it
-   #:expect)
-  (:documentation
-   "RSpec-like syntax for writing Common Lisp tests"))
-
-(in-package #:clspec)
-
 (defmacro expect (expression comparison expected)
   `(if (funcall (quote ,comparison) ,expression ,expected)
       (format t ".")
