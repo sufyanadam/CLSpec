@@ -18,3 +18,7 @@
      )
    )
    #+END_SRC
+
+** License
+
+   MIT License
